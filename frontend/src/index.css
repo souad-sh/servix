@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/* Only animate if the user allows motion */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal { animation: fade-in-up 500ms ease forwards; opacity: 0; }
+}
